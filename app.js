@@ -15,14 +15,14 @@ const Itemschema = mongoose.Schema({
 const Item = mongoose.model("Item",Itemschema);
 
 const item1 = new Item({
-  name:"Wake up at 7am!"
+  name:"Welcome to your list"
 }) ;
-const item2 = new Item({
+/*const item2 = new Item({
   name:"Brush your teeth"
 }) ;
 const item3 = new Item({
   name:"Drink Tea"
-}) ;
+}) ;*/
 //item3.save();
  const Listschema = mongoose.Schema({
    name:String,
@@ -51,7 +51,7 @@ app.get("/",function(req,res){
   }*/
   Item.find(function(err,items){
     if(items.length==0){
-      Item.insertMany([item1,item2,item3],function(err){
+      Item.insertMany([item1],function(err){
         if(err){
           console.log(err);
         }
@@ -79,7 +79,7 @@ app.get("/:cusliname",function(req,res){
       if(!foundlist){
         cuslist = new List({
           name:cusname,
-          items:[item1,item2,item3]
+          items:[item1]
         });
         cuslist.save();
         res.redirect("/"+cusname);
