@@ -16,12 +16,23 @@ h1 {
   background: white;
   border-radius: 5px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+
 }
+.side-1{
+  float: left;
+}
+.side-2{
+  float: left;
+}
+.links{
+
+  margin-top: 10px;}
 
 #heading {
   background-color: #A683E3;
   text-align: center;
 }
+
 
 .item {
   min-height: 70px;

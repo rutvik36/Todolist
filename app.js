@@ -6,6 +6,7 @@ const date = require(__dirname+"/date.js");
 const mongoose = require("mongoose");
 var lod = require('lodash');
 mongoose.connect("mongodb+srv://admin-rutvik:rutvik123@cluster0-7bz7h.mongodb.net/todolistDB",{useNewUrlParser:true,useUnifiedTopology: true,useFindAndModify: false});
+mongoose.connect("mongodb//localhost:27010//todolistDB",{useNewUrlParser:true,useUnifiedTopology: true,useFindAndModify: false});
 const Itemschema = mongoose.Schema({
   name:{
     type:String,
